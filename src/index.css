@@ -1,0 +1,165 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.menuBar {
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.75rem;
+  order: 9999;
+  margin-left: -90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: sticky;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.75rem;
+  border: none;
+  font-weight: 100;
+}
+button:hover {
+  background-color: slateblue;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: transparent;
+  }
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 20rem;
+  margin: 9px;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #000;
+  border-radius: 1.5px;
+  height: 3px;
+  border: 1px dashed #ffffff;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -7.5px; /* Centers thumb on the track */
+  background-color: #6677f4;
+  border-radius: 0px;
+  height: 18px;
+  width: 3.5px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #000;
+  border-radius: 1.5px;
+  height: 3px;
+  border: 1px solid #010101;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #6677f4;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0px;
+  height: 18px;
+  width: 3.5px;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  outline-offset: 0.125rem;
+}
+
+/* Style the input color picker */
+input[type="color"] {
+  /* Adjust the size and appearance */
+  width: 30px;
+  height: 30px;
+  border: none;
+
+  padding: 0;
+
+  /* Customize appearance and box shadow */
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Style when the color picker value is changed */
+input[type="color"]::after {
+  content: "\25BC"; /* Down arrow character */
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* Optional: Style the color picker container */
+.color-picker-container {
+  display: flex;
+  align-items: center;
+}
